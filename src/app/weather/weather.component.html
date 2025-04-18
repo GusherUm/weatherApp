@@ -1,0 +1,34 @@
+<div class="weather-container">
+  <p class = "heading">WEATHER APP</p>
+
+  <br><br>
+
+  <div class="search-container">
+
+    <div class="input-button-row">
+      <input [(ngModel)]="city" (input)="onCityInput()" placeholder="Enter city..." />
+      <button (click)="fetchWeather()" mat-stroked-button>GET WEATHER</button>
+    </div>
+    
+    <ul *ngIf="suggestions.length" class="suggestion-list">
+      <li *ngFor="let suggestion of suggestions" (click)="selectSuggestion(suggestion.name)">
+        {{ suggestion.name }}{{ suggestion.state ? ', ' + suggestion.state : '' }}, {{ suggestion.country }}
+      </li>
+    </ul>
+    
+  </div>
+
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+
+  <br><br><br><br>
+  <br><br>
+  <div class="weather-card" *ngIf="weatherData" [ngClass]="getCardClass()">
+    <div class="weather-content">
+      <h3>{{ weatherData.city }}</h3>
+      <img *ngIf="weatherData.icon" [src]="weatherData.icon" alt="Weather Icon" />
+      <p><strong>{{ weatherData.temperature }}°C</strong></p>
+      <p>{{ weatherData.description }}</p>
+    </div>
+  </div>
+  
+</div>

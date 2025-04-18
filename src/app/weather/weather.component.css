@@ -1,0 +1,116 @@
+.heading{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  font-size: x-large; 
+  font-weight: bolder; 
+  word-spacing: 4px;
+}
+
+.search-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.input-button-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.weather-container {
+    text-align: center;
+    padding: 2rem;
+  }
+  
+input {
+  padding: 8px;
+  width: 200px;
+  margin-bottom: 4px;
+  border-radius: 7px;
+  border: 1px solid #555;
+  background-color: #121212;
+  color: white;
+}
+  
+button {
+  margin-top: -3.5px;
+  padding: 8px 25px;
+  cursor: pointer;
+  border-radius: 7px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  font-size: small; 
+  word-spacing: 3px;
+}
+
+.weather-card {
+  color: black;
+  margin-top: 1rem;
+  padding: 2rem;
+  border-radius: 50%; /* Makes the div circular */
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  width: 250px;       /* Fixed width */
+  height: 250px;      /* Fixed height to make it a circle */
+  text-align: center;
+  vertical-align: middle;
+  line-height: normal;
+  overflow: hidden;
+}
+
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.error {
+  color: red;
+  margin-top: 1rem;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; 
+  font-size: larger;
+}
+
+/* Glow effects */
+.hot-glow {
+  background-color: rgb(255,215,0);
+  box-shadow: 0 0 30px 5px rgb(255,215,0);
+}
+
+.cold-glow {
+  background-color: aqua;
+  box-shadow: 0 0 20px 5px aqua;
+}
+
+.normal-glow {
+  background-color: white;
+  box-shadow: 0 0 20px 5px white;
+}
+
+.suggestion-list {
+  position: absolute;
+  top: 40px; /* below the input */
+  z-index: 999; /* on top of weather card */
+  background-color: #1e1e1e;
+  width: 40%;
+  border-radius: 5px;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  list-style: none;
+  text-align: left;
+}
+
+.suggestion-list li {
+  padding: 8px 12px;
+  cursor: pointer;
+  color: white;
+}
+
+.suggestion-list li:hover {
+  background-color: #333;
+}
